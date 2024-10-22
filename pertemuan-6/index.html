@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung BMI</title>
+</head>
+<body>
+    <h1>Hitung BMI</h1>
+    <p id="hasilBMI"></p>
+
+    <script>
+        (function() {
+            function hitungBMI(berat, tinggi) {
+                return berat / (tinggi * tinggi);
+            }
+
+            // Contoh penggunaan:
+            let berat = 70;  // dalam kg
+            let tinggi = 1.7;  // dalam meter
+            let bmi = hitungBMI(berat, tinggi);
+            
+            // Menampilkan hasil di elemen dengan id "hasilBMI"
+            document.getElementById('hasilBMI').textContent = `BMI: ${bmi.toFixed(2)}`;
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>My Application</h1>
+        </header>
+        <main class="app-main">
+            <section class="sidebar">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="#" onclick="showContent('home')">Home</a></li>
+                    <li><a href="#" onclick="showContent('about')">About</a></li>
+                    <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+                </ul>
+            </section>
+            <section class="content">
+                <div id="home" class="content-section">
+                    <h2>Welcome to Home</h2>
+                    <p>This is the home section.</p>
+                </div>
+                <div id="about" class="content-section" style="display: none;">
+                    <h2>About Us</h2>
+                    <p>This is the about section.</p>
+                </div>
+                <div id="contact" class="content-section" style="display: none;">
+                    <h2>Contact Us</h2>
+                    <p>This is the contact section.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="app-footer">
+            <p>© 2024 My Application</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

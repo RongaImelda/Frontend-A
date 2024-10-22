@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch User Data with Axios</title>
+    <!-- Tambahkan CDN Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Fetch User Data Example</h1>
+    <p>Cek data di Console dengan menggunakan Axios</p>
+
+    <script>
+        // Function ambilDataUser menggunakan async/await dan axios
+        async function ambilDataUser() {
+            try {
+                // Melakukan request GET ke API
+                const response = await axios.get('https://reqres.in/api/users?page=1&per_page=6');
+                
+                // Parsing response untuk mendapatkan data
+                const users = response.data;
+                
+                // Menampilkan email dari setiap user
+                users.data.forEach(user => {
+                    console.log(user.email); // Hanya menampilkan email
+                });
+            } catch (error) {
+                // Menangani error jika ada
+                console.log("Error fetching data:", error);
+            }
+        }
+
+        // Memanggil function ambilDataUser
+        ambilDataUser();
+    </script>
+</body>
+</html>
